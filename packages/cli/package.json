@@ -1,0 +1,10 @@
+{
+  "name": "@qinglong/cli",
+  "private": true,
+  "scripts": {
+    "start": "test"
+  },
+  "dependencies": {
+    "yargs": "^17.3.1"
+  }
+}
