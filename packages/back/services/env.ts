@@ -4,7 +4,7 @@ import { getFileContentByName } from '../config/util';
 import config from '../config';
 import * as fs from 'fs';
 import { Env, EnvModel, EnvStatus, initEnvPosition } from '../data/env';
-import { groupBy } from 'lodash-es';
+import { groupBy, chain } from 'lodash-es';
 import { Op } from 'sequelize';
 
 @Service()
@@ -167,7 +167,7 @@ export default class EnvService {
 
         // 忽略不符合bash要求的环境变量名称
         if (/^[a-zA-Z_][0-9a-zA-Z_]+$/.test(key)) {
-          let value = _(group)
+          let value = chain(group)
             .filter((x) => x.status !== EnvStatus.disabled)
             .map('value')
             .join('&')
