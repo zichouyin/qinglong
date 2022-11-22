@@ -4,7 +4,6 @@ import browserType from './index';
 export const useCtx = () => {
   const [width, setWidth] = useState('100%');
   const [marginLeft, setMarginLeft] = useState(0);
-  const [marginTop, setMarginTop] = useState(-72);
   const [isPhone, setIsPhone] = useState(false);
   const { platform } = useMemo(() => browserType(), []);
 
@@ -12,12 +11,10 @@ export const useCtx = () => {
     if (platform === 'mobile' && document.body.offsetWidth < 768) {
       setWidth('auto');
       setMarginLeft(0);
-      setMarginTop(0);
       setIsPhone(true);
     } else {
       setWidth('100%');
       setMarginLeft(0);
-      setMarginTop(-72);
       setIsPhone(false);
     }
   }, []);
@@ -29,7 +26,6 @@ export const useCtx = () => {
       top: 0,
       left: 0,
       zIndex: 20,
-      marginTop,
       width,
       marginLeft,
     } as any,

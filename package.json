@@ -89,7 +89,7 @@
   },
   "devDependencies": {
     "@ant-design/icons": "^4.7.0",
-    "@ant-design/pro-layout": "^6.33.1",
+    "@ant-design/pro-layout": "^7.2.5",
     "@monaco-editor/react": "4.2.1",
     "@react-hook/resize-observer": "^1.2.6",
     "@sentry/react": "^7.12.1",
@@ -114,7 +114,7 @@
     "@umijs/max": "^4.0.21",
     "@umijs/ssr-darkreader": "^4.9.45",
     "ansi-to-react": "^6.1.6",
-    "antd": "^4.23.0",
+    "antd": "^5.0.0",
     "antd-img-crop": "^4.2.3",
     "codemirror": "^5.65.2",
     "compression-webpack-plugin": "9.2.0",

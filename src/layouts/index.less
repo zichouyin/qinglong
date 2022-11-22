@@ -1,5 +1,4 @@
-@import '~antd/es/style/themes/default.less';
-@import '~@/styles/variable.less';
+@import '~antd/dist/reset.css';
 @import '~codemirror/lib/codemirror.css';
 
 @font-face {
@@ -48,7 +47,7 @@
   }
 }
 
-.ant-pro-grid-content.wide {
+.ant-pro-grid-content-wide {
   max-width: unset !important;
   overflow: auto;
 
@@ -61,8 +60,8 @@
 }
 
 .ql-container-wrapper-has-tab {
-  .ant-pro-grid-content.wide .ant-pro-page-container-children-content {
-    padding-top: 0;
+  .ant-pro-grid-content-wide .ant-pro-page-container-children-content {
+    padding-top: 0 !important;
   }
 }
 
@@ -135,10 +134,10 @@
 .ant-pro-page-container.ql-container-wrapper {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 48px);
-  height: calc(100vh - var(--vh-offset, 0px) - 48px);
+  height: 100vh;
+  height: calc(100vh - var(--vh-offset, 0px));
 
-  .ant-pro-grid-content.wide {
+  .ant-pro-grid-content-wide {
     flex: 1;
 
     .ant-pro-grid-content-children {
@@ -171,10 +170,9 @@
   }
 }
 
-.ant-layout-content.ant-pro-basicLayout-content.ant-pro-basicLayout-has-header {
+.ant-layout-content.ant-pro-layout-content.ant-pro-layout-has-header {
   margin-bottom: 0 !important;
-  min-height: calc(100vh - 72px);
-  min-height: calc(100vh - var(--vh-offset, 0px) - 72px);
+  width: auto;
 }
 
 .Resizer {
@@ -268,15 +266,10 @@ select:-webkit-autofill:focus {
   opacity: 0.5 !important;
 }
 
-.ant-pro-basicLayout-content {
-  margin: 12px;
-
-  .ant-pro-page-container {
-    margin: -12px;
-  }
-
-  .ant-pro-page-container-warp .ant-page-header {
+.ant-pro-layout-content {
+  .ant-pro-page-container .ant-page-header {
     border-bottom: 1px solid #eee;
+    max-width: unset;
   }
 
   .ant-pro-page-container-children-content {
